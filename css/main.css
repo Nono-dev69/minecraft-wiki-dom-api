@@ -3,10 +3,10 @@
 	padding: 0;
 }
 
-/* body{ 
-        background:url(../assets/background.png);
-        z-index: -2;
-} */
+body {
+	background: url(../assets/background.png);
+	z-index: -2;
+}
 
 .search-bar {
 	display: flex;
@@ -16,6 +16,7 @@
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	padding: 7px;	
 }
 
 .search {
@@ -45,16 +46,18 @@
 }
 
 .background {
-	padding: 12px;
+	padding: 75px;
+	background: url(../assets/background-cloud.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	z-index: -1;
 }
 
 .background2 {
 	padding: 12px;
-	background-image: url(../assets/background-cloud.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: repeat-y;
+	background: url(../assets/background-dirt.png);
+	top: 150px;
+	height: 225px;
+	z-index: -1;
 }
