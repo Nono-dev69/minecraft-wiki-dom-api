@@ -21,24 +21,27 @@ btn.addEventListener("click", async () => {
 	classification.textContent = mob.classification;
 	type.textContent = mob.type;
 
-	if (mob.type == "Passive") {
-		console.log("cc1");
+	const mobType = mob.type.toLowerCase();
 
+	if (mobType === "passive") {
 		sctName.classList.add("green");
-		sctName.classList.remove("gris");
-		sctName.classList.remove("red");
+		sctName.classList.remove("gris", "red");
+		sctType.classList.add("green");
+		sctType.classList.remove("gris", "red");
 	}
-	if (mob.type == "hostile") {
-		console.log("cc2");
+
+	if (mobType === "hostile") {
 		sctName.classList.add("red");
-		sctName.classList.remove("green");
-		sctName.classList.remove("gris");
+		sctName.classList.remove("green", "gris");
+		sctType.classList.add("red");
+		sctType.classList.remove("green", "gris");
 	}
-	if (mob.type == "neutral") {
-		console.log("cc3");
+
+	if (mobType === "neutral") {
 		sctName.classList.add("gris");
-		sctName.classList.remove("red");
-		sctName.classList.remove("green");
+		sctName.classList.remove("red", "green");
+		sctType.classList.add("gris");
+		sctType.classList.remove("red", "green");
 	}
 
 	console.log(mob.type);
