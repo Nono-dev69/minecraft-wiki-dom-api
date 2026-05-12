@@ -39,23 +39,25 @@
 					<div class="close-arena"><p>CLOSE</p></div>
 				</div>
 				<p>Choose an entity to spawn inside the <span>Arena.</span></p>
-				<div class="xyz-group">
-					<label for="">
-						Entity
-						<select name="" class="" id="">
-							Choose
-						</select>
-					</label>
-					<label for="">
-						X Coordinate
-						<input placeholder="255.2" type="text" />
-					</label>
-					<label for="">
-						Z Coordinate
-						<input placeholder="126.7" type="text" />
-					</label>
-				</div>
-				<button class="btn-memanent">SPAWN</button>
+				<form action="">
+					<div class="xyz-group">
+						<label for="">
+							Entity
+							<select name="" class="" id="">
+								Choose
+							</select>
+						</label>
+						<label for="">
+							X Coordinate
+							<input placeholder="255.2" type="text" />
+						</label>
+						<label for="">
+							Z Coordinate
+							<input placeholder="126.7" type="text" />
+						</label>
+					</div>
+					<button type="submit" class="btn-memanent">SPAWN</button>
+				</form>
 				<h2>Arena entities</h2>
 				<hr />
 				<p>
@@ -94,7 +96,9 @@
 				<h2>Arena map</h2>
 				<hr />
 				<div class="map">
-					<div><img src="" alt="" /></div>
+					<div class="boss-img">
+						<img src="./assets/boss-Vector.svg" alt="" />
+					</div>
 				</div>
 			</section>
 		</main>
