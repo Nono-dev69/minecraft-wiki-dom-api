@@ -21,6 +21,20 @@ main {
 	gap: 1rem;
 	padding: 1rem;
 }
+.search-bar {
+	display: grid;
+	grid-template-columns: 2fr minmax(12px, 1fr) 1fr;
+	align-items: center;
+	padding: 16px 6px;
+	gap: 10px;
+}
+.search {
+	background: transparent;
+	border: none;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
 .sky {
 	position: absolute;
 	top: 10%;
@@ -40,8 +54,8 @@ main {
 .background-dirt {
 	position: absolute;
 	top: 25%;
-    width: 100%;
-    z-index: -1;
+	width: 100%;
+    	z-index: -1;
 	overflow: hidden;
 }
 .arena {
