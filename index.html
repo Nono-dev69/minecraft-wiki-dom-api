@@ -8,5 +8,116 @@
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body></body>
+	<body>
+		<main>
+			<section>
+				<h1>Explore Minecraft entities</h1>
+				<div class="sct1">
+					<div><img src="./assets/stub-image.svg" alt="" /></div>
+					<div class="sct1-recommended">
+						<p class="p1">This page use many images.</p>
+						<p class="p2">
+							It is not recommended for people with limited or slow internet
+							connections to read through this page.
+						</p>
+					</div>
+				</div>
+				<div class="sct2">
+					<div class="sct2-de">
+						<p>
+							An <span>Entity </span>is an AI-driven game entity resembling a
+							living creature. Besides its common meaning, the term "mob" is
+							short for "mobile entity".[1] All entities can be attacked and
+							hurt (from falling, attacked by a player or another entity,
+							falling into the void, hit by an arrow, etc), and have some form
+							of voluntary movement.
+						</p>
+						<p>
+							Different types of entities often have unique AI and drop good or
+							bad loot depending on the entity that was killed.
+						</p>
+					</div>
+					<div>
+						<img class="recta" src="./assets/Rectangle 11.svg" alt="" />
+					</div>
+				</div>
+				<div class="sct3">
+					<h2>List of entities</h2>
+					<hr class="hr1" />
+					<p class="p3">
+						Entities are classifie by their nature from the player's
+						perspective. You can search for one or multiples entities by their
+						name using the search bar or simply by filling appropriate filters
+						(type, health, armor, damage, etc..)
+					</p>
+				</div>
+				<div class="sct4">
+					<div class="search">
+						<img src="./assets/search.svg" alt="" />
+						<input
+							id="search"
+							class="input1"
+							type="text"
+							placeholder="Search..."
+						/>
+					</div>
+					<div class="sct4-gird">
+						<div class="classification box">
+							<label>Classification</label>
+							<select>
+								<option value="">Choose</option>
+								<option></option>
+							</select>
+						</div>
+						<div class="type box">
+							<label>Type</label>
+							<select>
+								<option value="">Choose</option>
+								<option></option>
+							</select>
+						</div>
+						<div class="health box">
+							<label> Health </label>
+							<input type="number" placeholder="18" />
+						</div>
+						<div class="armor box">
+							<label> Armor </label>
+							<input type="number" placeholder="12" />
+						</div>
+						<div class="damage box">
+							<label> Damage </label>
+							<input type="number" placeholder="2" />
+						</div>
+					</div>
+					<div class="search-btn">
+						<button id="btn-search" class="search1">SEARCH</button>
+					</div>
+				</div>
+				<hr />
+				<div class="mods">
+					<div class="sct5">
+						<h3>No entity found</h3>
+						<img src="./assets/Vector (23).svg" alt="" />
+					</div>
+					<div class="sct6">
+						<div id="sct-name" class="name"><p id="name">Armadillo</p></div>
+						<div>
+							<img
+								id="imgmobs"
+								class="img1"
+								src="./assets/aa63176730a27d7a2aa1b80c4330035bbe486c79.png"
+								alt=""
+							/>
+						</div>
+						<div id="sct-type" class="type">
+							<p id="classification">Animal</p>
+							<p id="type">Passive</p>
+						</div>
+						<button class="detail">SEE MORE</button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+	<script src="./js/index.js"></script>
 </html>
