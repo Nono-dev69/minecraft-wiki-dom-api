@@ -34,7 +34,15 @@
 					<input class="search" type="text" placeholder="Search..." />
 				</div>
 			</nav>
-			<img class="menu" src="assets/menubrg.svg" alt="" />
+			<button class="menu" id="openbtn"><img class="menu" src="assets/menubrg.svg" alt="" /></button>
+			<dialog class="dial" id="dial">
+					<button id="closebtn"><img src="assets/close-dial.svg" alt=""></button>
+					<div class="dial-nav">
+						<a href="explore.html"><img src="assets/nav-explore.svg" alt="Explore"></a>
+						<a href="arena.html"><img src="assets/nav-arena.svg" alt="Arena"></a>
+						<a href="rules.html"><img src="assets/nav-rules.svg" alt="Rules"></a>
+					</div>
+			</dialog>
 			<img class="lunar" src="assets/lunar.svg" alt="">
 		</header>
 		<main class="">
@@ -75,5 +83,6 @@
 				</p>
 			</div>
 		</main>
+		<script src="js/menu.js"></script>
 	</body>
 </html>
