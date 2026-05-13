@@ -117,12 +117,12 @@ label {
 }
 input {
 	width: 70%;
-	background-color: #dbdbdb;
+	background-color: #ffffff;
+	color: #dbdbdb;
 	border: none;
 }
 select {
-	width: 70%;
-	background-color: #dbdbdb;
+	background-color: #ffffff;
 	border: none;
 }
 .btn-memanent {
@@ -131,8 +131,8 @@ select {
 	padding: 5px 45px;
 	border-radius: 999999px;
 	width: min-content;
-	color: #8e8e8e;
-	background-color: #dbdbdb;
+	color: #ffffff;
+	background-color: #4f8c69;
 	border: none;
 	font-size: 22px;
 	font-weight: 700;
@@ -153,6 +153,14 @@ thead {
 .tablet-desktop-sp {
 	display: none;
 }
+.btn-del-arena {
+	color: #ffffff;
+	background-color: #f25959;
+	border-radius: 8px;
+	font-weight: 700;
+	font-size: 12px;
+	padding: 5px;
+}
 .mobile-sp {
 	display: block;
 }
@@ -171,7 +179,7 @@ thead {
 .boss-img {
 	position: absolute;
 	top: calc(50% - 20px / 2);
-    left: calc(50% - 22px / 2);
+	left: calc(50% - 22px / 2);
 }
 @media (min-width: 450px) and (max-width: 768px) {
 	.arena {
