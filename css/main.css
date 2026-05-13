@@ -31,9 +31,10 @@ main {
 .search {
 	background: transparent;
     border: none;
-    text-align: center;
+    text-align: start;
     height: 100%;
     width: 100%;
+    padding: 8px 20px;
 }
 
 .search-logo {
@@ -70,7 +71,32 @@ main {
     z-index: -1;
 }
 
-@media  screen and(850px) {
-	
-	
+.navTablet {
+	display: none;
 }
+
+.lunar {
+	display: none;
+}
+
+@media screen and ( min-width: 760px) {	
+
+.search-bar {
+	display: grid;
+	justify-items:center;
+    grid-template-columns: 2fr 2fr minmax(1px 1fr) 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.navTablet {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	padding: 0px 100px;
+}
+
+.menu {display: none;}
+.lunar {display: grid;}
+}
+	
