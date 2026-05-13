@@ -209,7 +209,6 @@ h2 {
 	flex-direction: column;
 	width: 20%;
 	gap: 17px;
-	border: 2px solid #4f8c69;
 	padding: 12px;
 }
 
@@ -235,12 +234,24 @@ h2 {
 	background-color: #4f8c69;
 }
 
+.green-border {
+	border: 2px solid #4f8c69;
+}
+
 .gris {
 	background-color: #e3b599;
 }
 
+.gris-border {
+	border: 2px solid #e3b599;
+}
+
 .red {
 	background-color: #d24646;
+}
+
+.red-border {
+	border: 2px solid #d24646;
 }
 
 .detail {
