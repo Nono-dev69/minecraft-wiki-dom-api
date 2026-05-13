@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./css/arena.css" />
 	</head>
 	<body>
-		<header class="search-bar background">
+		<header class="search-bar">
 			<img src="assets/Logo.svg" alt="" />
 			<nav class="search-bar">
 				<div class="search-logo">
@@ -30,34 +30,34 @@
 			</nav>
 			<img src="assets/menubrg.svg" alt="" />
 		</header>
+		<div class="sky"></div>
+		<div class="background-dirt"></div>
 		<main>
-			<div class="sky"></div>
-			<div class="background-dirt">
-				<img src="./assets/background-dirt.png" alt="" />
-			</div>
 			<section class="arena">
-				<div class="row-part">
+				<div class="row-part rules-box">
 					<h1>Arena</h1>
 					<div class="close-arena"><p>CLOSE</p></div>
 				</div>
 				<p>Choose an entity to spawn inside the <span>Arena.</span></p>
-				<div class="xyz-group">
-					<label for="">
-						Entity
-						<select name="" class="" id="">
-							Choose
-						</select>
-					</label>
-					<label for="">
-						X Coordinate
-						<input placeholder="255.2" type="text" />
-					</label>
-					<label for="">
-						Z Coordinate
-						<input placeholder="126.7" type="text" />
-					</label>
-				</div>
-				<button class="btn-memanent">SPAWN</button>
+				<form action="">
+					<div class="xyz-group">
+						<label for="">
+							Entity
+							<select name="" class="" id="">
+								Choose
+							</select>
+						</label>
+						<label for="">
+							X Coordinate
+							<input placeholder="255.2" type="text" />
+						</label>
+						<label for="">
+							Z Coordinate
+							<input placeholder="126.7" type="text" />
+						</label>
+					</div>
+					<button type="submit" class="btn-memanent">SPAWN</button>
+				</form>
 				<h2>Arena entities</h2>
 				<hr />
 				<p>
@@ -66,16 +66,42 @@
 				</p>
 				<table>
 					<thead>
-						<td>Entity</td>
-						<td>Name</td>
-						<td>X Coordinate</td>
-						<td>Y Coordinate</td>
-						<td>Strength</td>
-						<td>del</td>
+						<td>
+							<span class="mobile-sp">Ent..</span>
+							<span class="tablet-desktop-sp">Entity</span>
+						</td>
+						<td>
+							<span class="mobile-sp">Na..</span
+							><span class="tablet-desktop-sp">Name</span>
+						</td>
+						<td>
+							<span class="mobile-sp">X</span
+							><span class="tablet-desktop-sp">X Coordinate</span>
+						</td>
+						<td>
+							<span class="mobile-sp">Y</span
+							><span class="tablet-desktop-sp">Y Coordinate</span>
+						</td>
+						<td>
+							<span class="mobile-sp">Stre..</span
+							><span class="tablet-desktop-sp">Strength</span>
+						</td>
+						<td>
+							<span class="mobile-sp">del</span
+							><span class="tablet-desktop-sp">del</span>
+						</td>
 					</thead>
 					<tbody></tbody>
 				</table>
+				<h2>Arena map</h2>
+				<hr />
+				<div class="map">
+					<div class="boss-img">
+						<img src="./assets/boss-Vector.svg" alt="" />
+					</div>
+				</div>
 			</section>
 		</main>
+		<script src="./arena.js"></script>
 	</body>
 </html>
