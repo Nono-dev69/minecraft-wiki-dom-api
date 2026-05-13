@@ -1,7 +1,9 @@
 const form = document.querySelector("form");
+const Select = document.querySelector("select");
+const formData = new FormData(form);
 
 async function test() {
-	const response = await fetch("http://192.168.1.15:3000/v1/arena/entities");
+	const response = await fetch("http://10.69.4.208:3000/v1/entities");
 	const json = await response.json();
 
 	console.log(json);
@@ -9,7 +11,7 @@ async function test() {
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const formData = new FormData(form);
+
 	console.log(data);
 	test();
 });

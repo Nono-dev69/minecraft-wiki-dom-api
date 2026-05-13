@@ -120,8 +120,7 @@ input {
 	background-color: #dbdbdb;
 	border: none;
 }
-select {
-	width: 70%;
+select {    
 	background-color: #dbdbdb;
 	border: none;
 }
@@ -171,7 +170,7 @@ thead {
 .boss-img {
 	position: absolute;
 	top: calc(50% - 20px / 2);
-    left: calc(50% - 22px / 2);
+	left: calc(50% - 22px / 2);
 }
 @media (min-width: 450px) and (max-width: 768px) {
 	.arena {
