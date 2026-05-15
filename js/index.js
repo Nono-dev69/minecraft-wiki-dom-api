@@ -1,55 +1,101 @@
 const search = document.getElementById("search");
 const btn = document.getElementById("btn-search");
-const nameMobs = document.getElementById("name");
-const img = document.getElementById("imgmobs");
-const classification = document.getElementById("classification");
-const type = document.getElementById("type");
+const classSelect = document.getElementById("class-select");
+const typeSelect = document.getElementById("type-select");
+const healthInput = document.getElementById("health-input");
+const armorInput = document.getElementById("armor-input");
+const damageInput = document.getElementById("damage-input");
 
-const divMobs = document.getElementById("sct-mobs");
-const sctName = document.getElementById("sct-name");
-const sctType = document.getElementById("sct-type");
+const noResult = document.getElementById("no-result");
+const resultsContainer = document.getElementById("results-container");
 
 btn.addEventListener("click", async () => {
-	const names = search.value;
-	const response = await fetch(
-		"http://10.69.4.208:3000/v1/entities?search=" + names,
-	);
+	const name = search.value.toLowerCase();
+	const classification = classSelect.value;
+	const type = typeSelect.value;
+	const health = healthInput.value;
+	const armor = armorInput.value;
+	const damage = damageInput.value;
+
+	const response = await fetch("http://play.hatlas.net:3000/v1/entities");
 	const data = await response.json();
-	const mob = data[0];
 
-	nameMobs.textContent = mob.name;
-	img.src = mob.image;
-	classification.textContent = mob.classification;
-	type.textContent = mob.type;
+	const filtered = data.filter((entity) => {
+		return (
+			(!name || entity.name.toLowerCase().includes(name)) &&
+			(!classification || entity.classification === classification) &&
+			(!type || entity.type === type) &&
+			(!health || entity.health >= Number(health)) &&
+			(!armor || entity.armor >= Number(armor)) &&
+			(!damage || entity.damage >= Number(damage))
+		);
+	});
 
-	const mobType = mob.type.toLowerCase();
-
-	if (mobType === "passive") {
-		divMobs.classList.add("green-border");
-		divMobs.classList.remove("gris-border", "red-border");
-		sctName.classList.add("green");
-		sctName.classList.remove("gris", "red");
-		sctType.classList.add("green");
-		sctType.classList.remove("gris", "red");
-	}
-
-	if (mobType === "hostile") {
-		divMobs.classList.add("red-border");
-		divMobs.classList.remove("green-border", "gris-border");
-		sctName.classList.add("red");
-		sctName.classList.remove("green", "gris");
-		sctType.classList.add("red");
-		sctType.classList.remove("green", "gris");
-	}
-
-	if (mobType === "neutral") {
-		divMobs.classList.add("gris-border");
-		divMobs.classList.remove("red-border", "green-border");
-		sctName.classList.add("gris");
-		sctName.classList.remove("red", "green");
-		sctType.classList.add("gris");
-		sctType.classList.remove("red", "green");
-	}
-
-	console.log(mob);
+	displayResults(filtered);
 });
+
+function displayResults(entities) {
+	resultsContainer.innerHTML = "";
+
+	if (entities.length === 0) {
+		noResult.style.display = "flex";
+		return;
+	}
+
+	noResult.style.display = "none";
+
+	for (let i = 0; i < entities.length; i++) {
+		const mob = entities[i];
+		const mobType = mob.type.toLowerCase();
+
+		let borderClass, bgClass;
+		if (mobType === "passive") {
+			borderClass = "green-border";
+			bgClass = "green";
+		} else if (mobType === "hostile") {
+			borderClass = "red-border";
+			bgClass = "red";
+		} else {
+			borderClass = "gris-border";
+			bgClass = "gris";
+		}
+
+		const card = document.createElement("div");
+		card.className = "sct6 " + borderClass;
+
+		const nameDiv = document.createElement("div");
+		nameDiv.className = "name " + bgClass;
+		const nameTxt = document.createElement("p");
+		nameTxt.textContent = mob.name;
+		nameDiv.appendChild(nameTxt);
+
+		const imgDiv = document.createElement("div");
+		const img = document.createElement("img");
+		img.className = "img1";
+		img.src = mob.image.replace("play.hastlas.net", "play.hatlas.net");
+		imgDiv.appendChild(img);
+
+		const typeDiv = document.createElement("div");
+		typeDiv.className = "type";
+		const classLink = document.createElement("a");
+		classLink.textContent = mob.classification;
+		const typeTxt = document.createElement("p");
+		typeTxt.textContent = mob.type;
+		typeDiv.appendChild(classLink);
+		typeDiv.appendChild(typeTxt);
+
+		const btn = document.createElement("button");
+		btn.className = "detail " + bgClass;
+		btn.textContent = "SEE MORE";
+		btn.addEventListener("click", () => {
+			window.location.href = "/details.html?id=" + mob.id;
+		});
+
+		card.appendChild(nameDiv);
+		card.appendChild(imgDiv);
+		card.appendChild(typeDiv);
+		card.appendChild(btn);
+
+		resultsContainer.appendChild(card);
+	}
+}

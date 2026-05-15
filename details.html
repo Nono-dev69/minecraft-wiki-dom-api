@@ -13,10 +13,11 @@
 			<section>
 				<div>
 					<p class="lien">
-						in: <a href="">Minecraft Entities</a>, <a href=""> Animal mobs</a>
+						in: <a href="">Minecraft Entities</a>,
+						<a href=""> Animal mobs</a>
 					</p>
 				</div>
-				<h1>Armadillo</h1>
+				<h1 id="entity-name">Armadillo</h1>
 				<div class="sct1">
 					<div><img src="./assets/stub-image (1).svg" alt="" /></div>
 					<div class="sct1-recommended">
@@ -26,69 +27,91 @@
 				</div>
 				<div class="sct2">
 					<div>
-						<p>
-							<span>Armadillo</span> is a mob that spawns in warm biomes. Spider
-							eyes, brushes, and lead can be used on the armadillo to breed,
-							brush, or lead it respectively.
+						<p id="entity-desc">
+							<span id="entity-name-span">Armadillo</span> is a
+							mob that spawns in warm biomes. Spider eyes,
+							brushes, and lead can be used on the armadillo to
+							breed, brush, or lead it respectively.
 						</p>
 						<p>
-							When a player is sprinting, mounting, or causes harm to an
-							armadillo, or when an undead hostile mob is nearby, it rolls up
-							into a cube-like shape to protect itself from harm.
+							When a player is sprinting, mounting, or causes harm
+							to an armadillo, or when an undead hostile mob is
+							nearby, it rolls up into a cube-like shape to
+							protect itself from harm.
 						</p>
 					</div>
 					<div>
-						<div>
-							<div>
-								<img src="./assets/Rectangle 14.svg" alt="" /> Armadillo
+						<div id="entity-card">
+							<div id="name-box">
+								<img
+									id="name-img"
+									src="./assets/Rectangle 14.svg"
+									alt=""
+								/>
+								<h4 id="name-txt">Armadillo</h4>
 							</div>
 							<div>
 								<img
+									id="mob-img"
 									src="./assets/aa63176730a27d7a2aa1b80c4330035bbe486c79.png"
 									alt=""
 								/>
 							</div>
 							<div>
-								<div>
-									<p>Health</p>
-									<div>
-										<p>6</p>
-										<img src="./assets/Rectangle 4.svg" alt="" />
+								<div id="health-box">
+									<p id="health-title">Health</p>
+									<div id="health-val">
+										<p id="health-number">6</p>
+										<img
+											id="health-img"
+											src="./assets/Rectangle 4.svg"
+											alt=""
+										/>
 									</div>
 								</div>
 								<hr />
-								<div>
-									<p>Armor</p>
-									<div>
-										<p>0</p>
-										<img src="./assets/Rectangle 4 (1).svg" alt="" />
+								<div id="armor-box">
+									<p id="armor-title">Armor</p>
+									<div id="armor-val">
+										<p id="armor-number">0</p>
+										<img
+											id="armor-img"
+											src="./assets/Rectangle 4 (1).svg"
+											alt=""
+										/>
 									</div>
 								</div>
 								<hr />
-								<div>
-									<p>Strength</p>
-									<div>
-										<p>0</p>
-										<img src="./assets/Rectangle 4 (1).svg" alt="" />
+								<div id="strength-box">
+									<p id="strength-title">Strength</p>
+									<div id="strength-val">
+										<p id="strength-number">0</p>
+										<img
+											id="strength-img"
+											src="./assets/Rectangle 4 (1).svg"
+											alt=""
+										/>
 									</div>
 								</div>
 								<hr />
-								<div>
-									<p>Classification</p>
-									<a href="">Animal</a>
+								<div id="class-box">
+									<p id="class-title">Classification</p>
+									<a id="class-value" href="">Animal</a>
 								</div>
 								<hr />
-								<div>
-									<p>Behavior</p>
-									<p>Passive</p>
+								<div id="behavior-box">
+									<p id="behavior-title">Behavior</p>
+									<p id="behavior-value">Passive</p>
 								</div>
 								<hr />
-								<button>DETAILS</button>
-								<div>
-									<p>Size</p>
-									<div>
-										<p>Height: 0.65 blocks</p>
-										<p>Width: 0.7 blocks</p>
+								<button id="detail-btn">DETAILS</button>
+								<div id="size-box">
+									<p id="size-title">Size</p>
+									<div id="size-val">
+										<p id="size-height">
+											Height: 0.65 blocks
+										</p>
+										<p id="size-width">Width: 0.7 blocks</p>
 									</div>
 								</div>
 							</div>
@@ -98,4 +121,5 @@
 			</section>
 		</main>
 	</body>
+	<script src="./js/details.js"></script>
 </html>

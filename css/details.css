@@ -69,3 +69,39 @@ h1 {
 	display: flex;
 	flex-direction: row;
 }
+
+.background-passive {
+	background-color: #4f8c69;
+}
+
+.background-neutral {
+	background-color: #e3b599;
+}
+
+.background-hostile {
+	background-color: #d24646;
+}
+
+.border-bottom-hostile {
+	border-bottom: solid 2px #d24646;
+}
+
+.border-bottom-neutral {
+	border-bottom: solid 2px #e3b599;
+}
+
+.border-bottom-passive {
+	border-bottom: solid 2px #4f8c69;
+}
+
+.border-hostile {
+	border: solid 2px #d24646;
+}
+
+.border-neutral {
+	border: solid 2px #e3b599;
+}
+
+.border-passive {
+	border: solid 2px #4f8c69;
+}

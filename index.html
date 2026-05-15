@@ -17,28 +17,34 @@
 					<div class="sct1-recommended">
 						<p class="p1">This page use many images.</p>
 						<p class="p2">
-							It is not recommended for people with limited or slow internet
-							connections to read through this page.
+							It is not recommended for people with limited or
+							slow internet connections to read through this page.
 						</p>
 					</div>
 				</div>
 				<div class="sct2">
 					<div class="sct2-de">
 						<p>
-							An <span>Entity </span>is an AI-driven game entity resembling a
-							living creature. Besides its common meaning, the term "mob" is
-							short for "mobile entity".[1] All entities can be attacked and
-							hurt (from falling, attacked by a player or another entity,
-							falling into the void, hit by an arrow, etc), and have some form
-							of voluntary movement.
+							An <span>Entity </span>is an AI-driven game entity
+							resembling a living creature. Besides its common
+							meaning, the term "mob" is short for "mobile
+							entity".[1] All entities can be attacked and hurt
+							(from falling, attacked by a player or another
+							entity, falling into the void, hit by an arrow,
+							etc), and have some form of voluntary movement.
 						</p>
 						<p>
-							Different types of entities often have unique AI and drop good or
-							bad loot depending on the entity that was killed.
+							Different types of entities often have unique AI and
+							drop good or bad loot depending on the entity that
+							was killed.
 						</p>
 					</div>
 					<div>
-						<img class="recta" src="./assets/Rectangle 11.svg" alt="" />
+						<img
+							class="recta"
+							src="./assets/Rectangle 11.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 				<div class="sct3">
@@ -46,9 +52,10 @@
 					<hr class="hr1" />
 					<p class="p3">
 						Entities are classifie by their nature from the player's
-						perspective. You can search for one or multiples entities by their
-						name using the search bar or simply by filling appropriate filters
-						(type, health, armor, damage, etc..)
+						perspective. You can search for one or multiples
+						entities by their name using the search bar or simply by
+						filling appropriate filters (type, health, armor,
+						damage, etc..)
 					</p>
 				</div>
 				<div class="sct4">
@@ -64,29 +71,47 @@
 					<div class="sct4-gird">
 						<div class="classification box">
 							<label>Classification</label>
-							<select>
+							<select id="class-select">
 								<option value="">Choose</option>
-								<option></option>
+								<option value="arthropod">Arthropod</option>
+								<option value="undead">Undead</option>
+								<option value="animal">Animal</option>
+								<option value="aquatic">Aquatic</option>
+								<option value="monster">Monster</option>
 							</select>
 						</div>
 						<div class="type box">
 							<label>Type</label>
-							<select>
+							<select id="type-select">
 								<option value="">Choose</option>
-								<option></option>
+								<option value="passive">Passive</option>
+								<option value="neutral">Neutral</option>
+								<option value="hostile">Hostile</option>
 							</select>
 						</div>
 						<div class="health box">
-							<label> Health </label>
-							<input type="number" placeholder="18" />
+							<label>Health</label>
+							<input
+								id="health-input"
+								type="number"
+								placeholder="18"
+							/>
 						</div>
 						<div class="armor box">
-							<label> Armor </label>
-							<input type="number" placeholder="12" />
+							<label>Armor</label>
+							<input
+								id="armor-input"
+								type="number"
+								placeholder="12"
+							/>
 						</div>
 						<div class="damage box">
-							<label> Damage </label>
-							<input type="number" placeholder="2" />
+							<label>Damage</label>
+							<input
+								id="damage-input"
+								type="number"
+								placeholder="2"
+							/>
 						</div>
 					</div>
 					<div class="search-btn">
@@ -95,26 +120,11 @@
 				</div>
 				<hr />
 				<div class="mods">
-					<div class="sct5">
+					<div class="sct5" id="no-result" style="display: none">
 						<h3>No entity found</h3>
 						<img src="./assets/Vector (23).svg" alt="" />
 					</div>
-					<div id="sct-mobs" class="sct6">
-						<div id="sct-name" class="name"><p id="name">Armadillo</p></div>
-						<div>
-							<img
-								id="imgmobs"
-								class="img1"
-								src="./assets/aa63176730a27d7a2aa1b80c4330035bbe486c79.png"
-								alt=""
-							/>
-						</div>
-						<div class="type">
-							<a href="" id="classification">Animal</a>
-							<p id="type">Passive</p>
-						</div>
-						<button id="sct-type" class="detail">SEE MORE</button>
-					</div>
+					<div id="results-container"></div>
 				</div>
 			</section>
 		</main>
