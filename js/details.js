@@ -75,12 +75,4 @@ function Entity(entity) {
 		classBox.classList.add("border-bottom-passive");
 		behaviorBox.classList.add("border-bottom-passive");
 	}
-
-
-
-	
 }
-
-
-
-
