@@ -12,6 +12,17 @@
 		<header class="search-bar">
 			<img src="assets/Logo.svg" alt="" />
 			<nav class="search-bar">
+				<div class="navTablet">
+					<a href="explore.html"
+						><img src="assets/nav-explore.svg" alt="Explore"
+					/></a>
+					<a href="Arena.html"
+						><img src="assets/nav-Arena.svg" alt="Arena"
+					/></a>
+					<a href="rules.html"
+						><img src="assets/nav-rules.svg" alt="Rules"
+					/></a>
+				</div>
 				<div class="search-logo">
 					<svg
 						width="18"
@@ -28,7 +39,26 @@
 					<input class="search" type="text" placeholder="Search..." />
 				</div>
 			</nav>
-			<img src="assets/menubrg.svg" alt="" />
+			<button class="menu" id="openbtn">
+				<img class="menu" src="assets/menubrg.svg" alt="" />
+			</button>
+			<dialog class="dial" id="dial">
+				<button id="closebtn">
+					<img src="assets/close-dial.svg" alt="" />
+				</button>
+				<div class="dial-nav">
+					<a href="explore.html"
+						><img src="assets/nav-explore.svg" alt="Explore"
+					/></a>
+					<a href="Arena.html"
+						><img src="assets/nav-Arena.svg" alt="Arena"
+					/></a>
+					<a href="rules.html"
+						><img src="assets/nav-rules.svg" alt="Rules"
+					/></a>
+				</div>
+			</dialog>
+			<img class="lunar" src="assets/lunar.svg" alt="" />
 		</header>
 		<div class="sky"></div>
 		<div class="background-dirt"></div>
@@ -102,6 +132,7 @@
 				</div>
 			</section>
 		</main>
+		<script src="./js/menu.js"></script>
 		<script src="./arena.js"></script>
 	</body>
 </html>
