@@ -34,6 +34,11 @@ btn.addEventListener("click", async () => {
 	displayResults(filtered);
 });
 
+
+
+
+
+
 function displayResults(entities) {
 	resultsContainer.innerHTML = "";
 
